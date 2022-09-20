@@ -3,28 +3,21 @@
 // 782 -> 8
 // 918 -> 1
 
+Console.Write("Введите трёхзначное число:");
+int number = Convert.ToInt32(Console.ReadLine());
 
-int ReadInt(string message)
+int GetSecondDigit(int num)
 {
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-int secondDigit(int a)
-{
-    int result = ((a / 10) % 10);
+    int result = num / 10 % 10;
     return result;
 }
-
-int number = ReadInt("Введите трехзначное число: ");
-int amount = number.ToString().Length;
-
-if (amount < 3 || amount > 3)
+if(number > 99 && number < 1000)
 {
-    Console.WriteLine("Вы ввели не трехзначное число");
+    Console.WriteLine(GetSecondDigit(number)); 
 }
 else
 {
-    Console.WriteLine(secondDigit(number));
+    Console.WriteLine("Вы ввели некорректное число, введите трёзначное число!"); 
 }
+
 
