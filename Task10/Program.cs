@@ -6,9 +6,9 @@
 Console.Write("Введите трёхзначное число:");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int GetSecondDigit(int num)
+int GetSecondDigit(int number)
 {
-    int result = num / 10 % 10;
+    int result = number / 10 % 10;
     return result;
 }
 if(number > 99 && number < 1000)

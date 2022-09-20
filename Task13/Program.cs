@@ -8,14 +8,14 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine()); 
 
-void GetThirdDigit(int num)
+void GetThirdDigit(int number)
 {
-    if (num >= 100)
+    if (number >= 100)
     {
-        while (num > 999) num = num / 10;            
-        // 51678 / 10 = 516
-        Console.WriteLine(num % 10);
-        // 516 % 10 = 56,6
+        while (number > 999) number = number / 10;            
+        // 67816 / 10 = 678
+        Console.WriteLine(number % 10);
+        // 678 % 10 = 67,8
     }
     else
     {
